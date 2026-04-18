@@ -1,0 +1,6 @@
+# 论文
+*.pdf
+*.csv
+data/
+# 其他文件
+/CLAUDE.md

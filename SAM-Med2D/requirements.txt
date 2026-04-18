@@ -1,0 +1,8 @@
+albumentations==2.0.8
+apex==0.9.10dev
+matplotlib==3.10.8
+numpy
+onnxruntime
+pycocotools==2.0.11
+scikit-image
+tqdm==4.67.3
