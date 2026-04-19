@@ -68,13 +68,18 @@ def to_device(batch_input, device):
 
 
 def prompt_and_decoder(args, batched_input, model, image_embeddings, decoder_iter = False):
+    """封装了 Prompt Encoder 和 Mask Decoder 的前向传播
+    1. 多掩码输出 (multimask_output)：有时候用户的点击是有歧义的（比如点在衬衫上，是指衬衫还是指整个人？）。
+        * SAM 默认会输出 3 个不同层级的 Mask，以及模型对这 3 个 Mask 质量的自信程度（iou_predictions）。
+    2. 选择最优解：代码中有一段逻辑 torch.max(iou_predictions, dim=1)，它会自动挑出模型认为 IoU 最高的那个 Mask 作为最终输出，并将其上采样 (F.interpolate) 到 256x256。
+    """
     if  batched_input["point_coords"] is not None:
         points = (batched_input["point_coords"], batched_input["point_labels"])
     else:
         points = None
 
     if decoder_iter:
-        with torch.no_grad():
+        with torch.no_grad():                               # 在 iterative refinement 阶段，不训练 prompt encoder
             sparse_embeddings, dense_embeddings = model.prompt_encoder(
                 points=points,
                 boxes=batched_input.get("boxes", None),
@@ -169,12 +174,13 @@ def train_one_epoch(args, model, optimizer, train_loader, epoch, criterion):
         if int(batch+1) % 50 == 0:
             print(f'Epoch: {epoch+1}, Batch: {batch+1}, first {flag} prompt: {SegMetrics(masks, labels, args.metrics)}')
 
+        # 下面是迭代修正训练，为了让模型学会“根据用户的连续点击来修正错误”
         point_num = random.choice(args.point_list)
-        batched_input = generate_point(masks, labels, low_res_masks, batched_input, point_num)
+        batched_input = generate_point(masks, labels, low_res_masks, batched_input, point_num)      # 它会对比上一轮预测的 Mask 和真实的 Label，找出模型预测错误的区域，然后在错误区域上自动生成一个新的点击
         batched_input = to_device(batched_input, args.device)
     
-        image_embeddings = image_embeddings.detach().clone()
-        for n, value in model.named_parameters():
+        image_embeddings = image_embeddings.detach().clone()                                        # 图像没变，直接把阶段一算好的图像特征拿来复用，提升速度
+        for n, value in model.named_parameters():                                                   # 把 image_encoder 的梯度全部关掉，因为接下来的互动只涉及decoder(也没有prompt encoder）
             if "image_encoder" in n:
                 value.requires_grad = False
             else:
@@ -185,6 +191,7 @@ def train_one_epoch(args, model, optimizer, train_loader, epoch, criterion):
             if iter == init_mask_num or iter == args.iter_point - 1:
                 batched_input = setting_prompt_none(batched_input)
 
+            # 将“新生成的点击”和“上一轮预测的低分辨率 Mask (low_res_masks)”同时作为新的 Prompt 送入模型，再次计算loss并反响传播
             if args.use_amp:
                 masks, low_res_masks, iou_predictions = prompt_and_decoder(args, batched_input, model, image_embeddings, decoder_iter=True)
                 loss = criterion(masks, labels, iou_predictions)
@@ -228,6 +235,7 @@ def train_one_epoch(args, model, optimizer, train_loader, epoch, criterion):
 
 
 def postprocess_masks(low_res_masks, image_size, original_size):
+    "将模型输出的 256x256 预测图，裁剪或插值回医生标注时的最原始尺寸"
     ori_h, ori_w = original_size
     masks = F.interpolate(low_res_masks, (image_size, image_size),
                           mode="bilinear", align_corners=False)
