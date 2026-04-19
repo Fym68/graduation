@@ -5,7 +5,7 @@ import argparse
 import os
 from torch import optim
 from torch.utils.data import DataLoader
-from DataLoader import TrainingDataset, stack_dict_batched
+from DataLoader import TrainingDataset, TestingDataset, stack_dict_batched
 from utils import FocalDiceloss_IoULoss, get_logger, generate_point, setting_prompt_none
 from metrics import SegMetrics
 import time
@@ -18,6 +18,7 @@ try:
 except ImportError:
     amp = None
 import random
+import wandb
 
 
 def parse_args():
@@ -43,6 +44,8 @@ def parse_args():
     parser.add_argument("--multimask", type=bool, default=True, help="ouput multimask")
     parser.add_argument("--encoder_adapter", type=bool, default=True, help="use adapter")
     parser.add_argument("--use_amp", type=bool, default=False, help="use amp")
+    parser.add_argument("--val_interval", type=int, default=5, help="validate every N epochs")
+    parser.add_argument("--wandb_project", type=str, default=None, help="wandb project name, None to disable")
     args = parser.parse_args()
     if args.resume is not None:
         args.sam_checkpoint = None
@@ -224,9 +227,73 @@ def train_one_epoch(args, model, optimizer, train_loader, epoch, criterion):
     return train_losses, train_iter_metrics
 
 
+def postprocess_masks(low_res_masks, image_size, original_size):
+    ori_h, ori_w = original_size
+    masks = F.interpolate(low_res_masks, (image_size, image_size),
+                          mode="bilinear", align_corners=False)
+    if ori_h < image_size and ori_w < image_size:
+        top = torch.div((image_size - ori_h), 2, rounding_mode='trunc')
+        left = torch.div((image_size - ori_w), 2, rounding_mode='trunc')
+        masks = masks[..., top : ori_h + top, left : ori_w + left]
+    else:
+        masks = F.interpolate(masks, original_size, mode="bilinear", align_corners=False)
+    return masks
+
+
+@torch.no_grad()
+def validate(args, model, val_loader, criterion):
+    model.eval()
+    val_losses = []
+    val_iter_metrics = [0] * len(args.metrics)
+    l = len(val_loader)
+
+    for batched_input in tqdm(val_loader, desc="Validating"):
+        batched_input = to_device(batched_input, args.device)
+        ori_labels = batched_input["ori_label"]
+        original_size = batched_input["original_size"]
+
+        image_embeddings = model.image_encoder(batched_input["image"])
+
+        batched_input["point_coords"], batched_input["point_labels"] = None, None
+        sparse_embeddings, dense_embeddings = model.prompt_encoder(
+            points=None,
+            boxes=batched_input.get("boxes", None),
+            masks=batched_input.get("mask_inputs", None),
+        )
+        low_res_masks, iou_predictions = model.mask_decoder(
+            image_embeddings=image_embeddings,
+            image_pe=model.prompt_encoder.get_dense_pe(),
+            sparse_prompt_embeddings=sparse_embeddings,
+            dense_prompt_embeddings=dense_embeddings,
+            multimask_output=args.multimask,
+        )
+        if args.multimask:
+            max_values, max_indexs = torch.max(iou_predictions, dim=1)
+            iou_predictions = max_values.unsqueeze(1)
+            low_res = []
+            for i, idx in enumerate(max_indexs):
+                low_res.append(low_res_masks[i:i+1, idx])
+            low_res_masks = torch.stack(low_res, 0)
+
+        masks = postprocess_masks(low_res_masks, args.image_size, original_size)
+
+        loss = criterion(masks, ori_labels, iou_predictions)
+        val_losses.append(loss.item())
+
+        batch_metrics = SegMetrics(masks, ori_labels, args.metrics)
+        for j in range(len(args.metrics)):
+            val_iter_metrics[j] += batch_metrics[j]
+
+    val_iter_metrics = [m / l for m in val_iter_metrics]
+    val_metrics = {args.metrics[i]: '{:.4f}'.format(val_iter_metrics[i])
+                   for i in range(len(val_iter_metrics))}
+    avg_loss = np.mean(val_losses)
+    return avg_loss, val_metrics
+
+
 
 def main(args):
-    model = sam_model_registry[args.model_type](args).to(args.device) 
+    model = sam_model_registry[args.model_type](args).to(args.device)
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     criterion = FocalDiceloss_IoULoss()
 
@@ -248,20 +315,27 @@ def main(args):
     else:
         print('*******Do not use mixed precision')
 
-    train_dataset = TrainingDataset(args.data_path, image_size=args.image_size, mode='train', point_num=1, mask_num=args.mask_num, requires_name = False)
-    train_loader = DataLoader(train_dataset, batch_size = args.batch_size, shuffle=True, num_workers=4)
-    print('*******Train data:', len(train_dataset))   
+    train_dataset = TrainingDataset(args.data_path, image_size=args.image_size, mode='train', point_num=1, mask_num=args.mask_num, requires_name=False)
+    train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=4)
+    print('*******Train data:', len(train_dataset))
+
+    val_dataset = TestingDataset(data_path=args.data_path, image_size=args.image_size, mode='test', requires_name=False, point_num=1, return_ori_mask=True)
+    val_loader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=4)
+    print('*******Val data:', len(val_dataset))
 
     loggers = get_logger(os.path.join(args.work_dir, "logs", f"{args.run_name}_{datetime.datetime.now().strftime('%Y%m%d-%H%M.log')}"))
 
-    best_loss = 1e10
+    if args.wandb_project:
+        wandb.init(project=args.wandb_project, name=args.run_name, config=vars(args))
+
+    best_val_dice = 0.0
     l = len(train_loader)
+    save_dir = os.path.join(args.work_dir, "models", args.run_name)
+    os.makedirs(save_dir, exist_ok=True)
 
     for epoch in range(0, args.epochs):
         model.train()
-        train_metrics = {}
         start = time.time()
-        os.makedirs(os.path.join(f"{args.work_dir}/models", args.run_name), exist_ok=True)
         train_losses, train_iter_metrics = train_one_epoch(args, model, optimizer, train_loader, epoch, criterion)
 
         if args.lr_scheduler is not None:
@@ -269,21 +343,38 @@ def main(args):
 
         train_iter_metrics = [metric / l for metric in train_iter_metrics]
         train_metrics = {args.metrics[i]: '{:.4f}'.format(train_iter_metrics[i]) for i in range(len(train_iter_metrics))}
-
         average_loss = np.mean(train_losses)
         lr = scheduler.get_last_lr()[0] if args.lr_scheduler is not None else args.lr
-        loggers.info(f"epoch: {epoch + 1}, lr: {lr}, Train loss: {average_loss:.4f}, metrics: {train_metrics}")
 
-        if average_loss < best_loss:
-            best_loss = average_loss
-            save_path = os.path.join(args.work_dir, "models", args.run_name, f"epoch{epoch+1}_sam.pth")
-            state = {'model': model.float().state_dict(), 'optimizer': optimizer}
-            torch.save(state, save_path)
-            if args.use_amp:
-                model = model.half()
+        log_msg = f"epoch: {epoch + 1}, lr: {lr}, Train loss: {average_loss:.4f}, metrics: {train_metrics}"
+        log_dict = {"train/loss": average_loss, "train/iou": float(train_metrics['iou']),
+                    "train/dice": float(train_metrics['dice']), "lr": lr, "epoch": epoch + 1}
+
+        if (epoch + 1) % args.val_interval == 0 or (epoch + 1) == args.epochs:
+            val_loss, val_metrics = validate(args, model, val_loader, criterion)
+            val_dice = float(val_metrics['dice'])
+            log_msg += f" | Val loss: {val_loss:.4f}, metrics: {val_metrics}"
+            log_dict.update({"val/loss": val_loss, "val/iou": float(val_metrics['iou']), "val/dice": val_dice})
+
+            if val_dice > best_val_dice:
+                best_val_dice = val_dice
+                save_path = os.path.join(save_dir, "best.pth")
+                state = {'model': model.float().state_dict(), 'optimizer': optimizer,
+                         'epoch': epoch + 1, 'val_dice': val_dice}
+                torch.save(state, save_path)
+                if args.use_amp:
+                    model = model.half()
+                log_msg += f" [BEST, saved]"
+
+        loggers.info(log_msg)
+        if args.wandb_project:
+            wandb.log(log_dict)
 
         end = time.time()
         print("Run epoch time: %.2fs" % (end - start))
+
+    if args.wandb_project:
+        wandb.finish()
 
 
 if __name__ == '__main__':

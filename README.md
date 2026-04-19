@@ -70,6 +70,44 @@
     1. 132个训练数据集暂时先按照 2:8 的比例分别划分给第一二阶段
     2. 为了方便后续修改比例编写代码`/home/fym/graduation/data_utils/split_train_as_ratio.py`生成数据csv存放在`/home/fym/graduation/data/`目录下
 
+## stage1微调
+
+### v0：Stage 1 纯训练（无验证）— 2026-04-18
+
+- 日志：`/home/fym/Nas/fym/datasets/graduation/sam-med2d/logs/stage1_gtbbox_notext_nodpo_v0_20260418-2033.log`
+- 30 epoch，Train Dice 从 0.798 → 0.891，Train IoU 从 0.682 → 0.815
+- 无验证集评估，无法判断泛化能力
+
+### v1：Stage 1 + 验证评估 — 2026-04-19
+
+- 日志：`/home/fym/Nas/fym/datasets/graduation/sam-med2d/logs/stage1_gtbbox_notext_nodpo_v1_20260419-1647.log`
+- Best checkpoint：`/home/fym/Nas/fym/datasets/graduation/sam-med2d/models/stage1_gtbbox_notext_nodpo_v1/best.pth`
+
+| Epoch | Train Loss | Train Dice | Val Loss | Val Dice | Val IoU | 备注 |
+|---|---|---|---|---|---|---|
+| 5 | 0.1775 | 0.8433 | 0.3687 | **0.7667** | 0.6471 | **BEST，已保存** |
+| 10 | 0.1518 | 0.8631 | 0.3930 | 0.7372 | 0.6183 | |
+| 15 | 0.1411 | 0.8766 | 0.3961 | 0.7433 | 0.6244 | |
+| 20 | 0.1392 | 0.8723 | 0.3893 | 0.7497 | 0.6305 | |
+| 25 | 0.1341 | 0.8844 | 0.3984 | 0.7495 | 0.6303 | |
+| 30 | 0.1287 | 0.8866 | 0.4091 | 0.7461 | 0.6279 | |
+
+**分析**：
+- 明显过拟合：Train Dice 0.89 vs Val Dice 0.77，且 Val 在 epoch 5 后持续下降
+- 原因：训练集仅 224 张图，数据量太小
+- 这正是 DPO（Stage 2）要解决的问题——利用 927 张无标注图像提升泛化
+
+
+## stage2dpo
+> 这个阶段是整个论文/毕设项目的核心创新点，效果提升高不高就看这里了
+
+1. 一些初步的设想/注意点：
+    1. dpo的数据json可能还没有设计呢
+    2. dpo阶段的dataset是否需要新写一个
+    3. 在训练的时候最好是多卡训练是否效果会更好一点，同时我仍然希望可以变训练变在测试集上验证效果，并用wandb可视化训练效果
+    4. dpo阶段只对mask decoder进行微调，这一点我觉得需要格外注意，同时训练的过程中要保存在训练集上最好效果的模型 + 隔多少epoch就保存的模型 + 最终训练结束时的模型
+
+
 
 
 

@@ -163,6 +163,7 @@ cython_debug/
 
 # 新添加的内容
 data_demo/
+wandb/
 
 
 
