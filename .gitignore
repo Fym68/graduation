@@ -3,4 +3,4 @@
 *.csv
 data/
 # 其他文件
-/CLAUDE.md
+/paper_stage2_DPO_content.md
