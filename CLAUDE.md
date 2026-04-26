@@ -47,22 +47,6 @@ SAM-Med2D 已有：完整训练代码（`train.py`）、FocalDiceLoss、DataLoad
 
 ---
 
-## 环境配置
-
-```bash
-# 进入项目
-cd SAM-Med2D
-
-# 安装依赖（需要 apex 支持 AMP）
-pip install -r requirements.txt
-
-# 下载 SAM-Med2D 预训练权重，放到 pretrain_model/ 目录
-# 百度云: https://pan.baidu.com/s/1HWo_s8O7r4iQI6irMYU8vQ  提取码: dk5x
-# 文件名: sam-med2d_b.pth
-mkdir -p pretrain_model
-```
-
----
 
 ## 数据格式
 
@@ -84,7 +68,7 @@ SAM-Med2D 的 DataLoader 使用两种 JSON 索引文件：
 
 ---
 
-## 训练命令
+## ⚠️训练命令（待修改）
 
 **Stage 1：GT bbox 提示微调（已完成）**
 ```bash
@@ -192,7 +176,7 @@ if text_embedding is not None:
   - `"Cervical cancer tumor region on T2-weighted MRI, high signal intensity lesion"`
 - 每张图像使用相同的固定文本（class-level），不需要 per-image 生成
 
-### 2. Stage 2 DPO Loss（核心贡献，下一步实现）
+### 2. Stage 2 DPO Loss
 
 **位置**：新建 `SAM-Med2D/loss_dpo.py`
 
@@ -215,7 +199,7 @@ Stage 2 只训练 Mask Decoder，冻结 Image Encoder 和 Prompt Encoder。
 
 ---
 
-## 实验安排
+## ⚠️非常初步的实验安排（可删除）
 
 ### 数据划分（T2S 序列，132 train + 30 test）
 
@@ -292,7 +276,7 @@ Stage 2 只训练 Mask Decoder，冻结 Image Encoder 和 Prompt Encoder。
 
 ---
 
-## 实验结果
+## ⚠️初步的实验结果整理（后续有很多实验结果记录，这里也只是参考）
 
 ### v0：Stage 1 纯训练（无验证）— 2026-04-18
 
@@ -321,7 +305,7 @@ Stage 2 只训练 Mask Decoder，冻结 Image Encoder 和 Prompt Encoder。
 
 ---
 
-## 后续实验计划
+## ⚠️后续实验计划（可删，比较早期的）
 
 ### 对比实验（论文表格所需）
 
@@ -350,19 +334,6 @@ Stage 2 只训练 Mask Decoder，冻结 Image Encoder 和 Prompt Encoder。
 
 ---
 
-## 数据与存储路径
-
-| 路径 | 说明 |
-|---|---|
-| `/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/` | Stage 1 + Stage 2 图像和标签 |
-| `/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/test/positive/` | Stage 3（测试）图像和标签 |
-| `/home/fym/Nas/fym/datasets/graduation/sam-med2d/logs/` | 训练日志（本地空间不足，存 NAS） |
-| `/home/fym/Nas/fym/datasets/graduation/sam-med2d/models/` | 模型 checkpoint（同上） |
-| `/home/fym/graduation/data/t2s_train_2vs8.csv` | 数据划分 CSV |
-| `/home/fym/graduation/SAM-Med2D/data_cervical/` | JSON 索引文件 |
-| `/home/fym/graduation/SAM-Med2D/pretrain_model/sam-med2d_b.pth` | SAM-Med2D 预训练权重 |
-
----
 
 ## Stage 2 DPO 训练问题分析（2026-04-20）
 
@@ -617,3 +588,190 @@ SAM decoder 本身输出 3 个不同粒度的 mask，用这 3 个 mask 作为候
 ### 推荐实施路径
 
 **优先试 A + D 组合**：方案 A 直接解决信号稀释问题，方案 D 作为安全网防止漂移。方案 B 可作为 A 的补充进一步增加候选差异。
+
+
+# 当前实验的总结和思考：
+1. 关于 Stage 1 ≈ Zero-shot 的问题
+  * 这不是坏事。SAM-Med2D 本身就是在大量医学图像上预训练过的，你用 224 张图（26 个患者）微调，能持平说明：(1) SAM-Med2D 预训练质量高，(2) 你的数据量确实太少，Stage 1 主要是让模型适配你的数据分布而非学到新能力。
+  * 但 Stage 2 用 80% 无标注数据把 dice 从 0.767 推到 ~0.793（val），这才是核心贡献。
+2. 叙事框架建议
+  * 你的题目"面向标注稀缺的医学图像分割方法研究"，核心叙事不应该是"纯无监督"，而是"如何最大化利用有限标注 + 大量无标注数据"。建议这样组织：
+    1. 问题：医学图像标注昂贵（尤其 MRI 需要放射科医生逐层标注），实际场景中只有少量标注数据
+    2. 方法框架：两阶段渐进式学习
+      * Stage 1：用少量标注数据 + 视觉提示（bbox）+ 文本提示（BiomedCLIP）高效微调 SAM
+      * Stage 2：用大量无标注数据，通过 DPO 偏好优化 + 监督锚定联合训练，进一步提升分割质量
+    3. **关键贡献点**：
+      * 提出了适配医学小病灶场景的 DPO 改进（masked log_prob 解决信号稀释）
+      * 发现并分析了原始 DPO 在小病灶场景下失效的原因（这本身就是有价值的发现）
+      * 通过 DPO+supervision 联合训练，在仅 20% 标注的条件下超越了全监督基线
+3. 关于工作量的担忧：
+  * 你实际做的工作量不少：Stage 1 训练流程搭建、DPO loss 实现与调试、信号稀释问题的诊断与修复、大量消融实验。关键是把这些写清楚。
+4. 后续实验安排建议
+  1. **不同标注比例实验（强化"标注稀缺"叙事）**：把 Stage 1 的标注数据从 20% 改成 10% 和 5%，看 Stage 1 性能下降多少，然后 Stage 2 能拉回多少。这直接回答"标注越少，DPO 越有价值吗？"
+  2. 对比方法：跑 1-2 个经典半监督方法（如 Mean Teacher、Pseudo Label）作为 baseline，证明你的方法有竞争力
+  3. 文本提示实验：加 BiomedCLIP 文本分支，即使只提升 0.5%，也是一个完整的消融项
+  > 其中第 2 点最能支撑你的题目——如果能证明"标注从 20% 降到 5% 时，Stage 2 DPO 的增益从 +1.5% 变成 +3%"，那叙事就非常有说服力了。
+
+
+# 原论文实验设计详解（用于指导复刻）
+
+## 总体实验逻辑
+论文在 **3个公开数据集、4个数据比例** 下评测，核心对比逻辑如下：
+
+- **数据比例（10%/20%/50%/100%）指的是 Stage 1 + Stage 2 合计占总训练集的比例**，不是只指Stage 1。例如"20%数据设置"= Stage 1 用10%有标注 + Stage 2 用10%无标注 = 共用了20%的训练数据。
+- 论文用尽了全部数据。100%数据设置 = Stage 1用10%标注 + Stage 2用90%无标注。
+- 对比基线（U-Net、nnU-Net等）在同等比例下**全部使用带标注的GT**直接监督训练，因此它们是更强的有监督基线。论文的方法在其中大部分是无标注数据，能超过它们说明DPO的有效性。
+
+## 三个数据集规模
+
+| 数据集 | 训练集 | 测试集 | 任务 |
+|---|---|---|---|
+| COVID-QU-Ex（Chest X-ray） | 27,132张 | 6,788张 | 肺部分割 |
+| BUSI + UDIAT（Breast USD） | 600张 | 210张 | 乳腺肿瘤分割 |
+| AMOS-CT | 200个扫描 | 100个扫描 | 15器官分割 |
+
+## 对比基线说明（共6个+1个内部基线）
+
+| 基线 | 说明 |
+|---|---|
+| U-Net | 经典卷积网络，数据饥渴型 |
+| nnU-Net | 自配置U-Net，同样需要全标注 |
+| SAM | 原版SAM，**推理时需要人工提供点/框prompt** |
+| SAM-Med2D | 医学微调SAM，同样需要人工prompt |
+| SAM-Med3D | 仅AMOS-CT用，3D版本 |
+| Self-Prompt SAM（SAM-SP变体） | **推理时不需要人工prompt**：从上一轮自己的输出mask中自动生成下一轮prompt，训练有监督但推理自动化。论文用其去掉知识蒸馏的变体。性能约比SAM-Med2D高1% |
+| Prompt-only（内部基线） | 论文自己的Stage 1模型，**不加Stage 2 DPO**，用指定比例的**全量标注数据**全监督训练，作为"监督上界" |
+
+1. 评价指标：
+  - Dice Similarity Coefficient（主要）
+  - IoU
+  - Surface Dice Similarity（SDC）
+  - AMOS-CT 报 mean Dice（15个器官平均）
+
+
+## 核心数值结果
+
+**Chest X-ray，20%数据（Ours = 10%标注 + 10%无标注）：**
+
+| 方法 | Dice |
+|---|---|
+| U-Net（20%全标注） | 58.66 |
+| nnU-Net（20%全标注） | 60.97 |
+| SAM（20%全标注） | 61.64 |
+| SAM-Med2D（20%全标注） | 67.81 |
+| Self-Prompt SAM（20%全标注） | 68.41 |
+| **Ours（10%标注 + 10%无标注）** | **78.87** |
+| Prompt-only（20%全标注，监督上界） | 79.13 |
+
+**AMOS-CT，20%数据：**
+
+| 方法 | mean Dice |
+|---|---|
+| U-Net | 59.35 |
+| nnU-Net | 65.21 |
+| SAM | 64.93 |
+| SAM-Med2D | 66.57 |
+| SAM-Med3D | 72.54 |
+| Self-Prompt SAM | 71.83 |
+| **Ours** | **77.69** |
+| Prompt-only（监督上界） | 79.20 |
+
+**随无标注数据增多的趋势（Chest X-ray，Stage 1固定用10%标注）：**
+
+| 配置 | Dice |
+|---|---|
+| 10% + 10%无标注 | 78.87 |
+| 10% + 20%无标注 | 85.15 |
+| 10% + 40%无标注 | 89.68 |
+
+## 消融实验详解
+
+### Table 1：逐步移除组件
+
+所有行均以10%标注数据做Stage 1，第1行额外用10%无标注做Stage 2。
+
+| 数据设置 | 配置 | Dice（Xray）| Dice（USD）| mDice（CT）|
+|---|---|---|---|---|
+| 10%+10%无标注 | **完整方法** | **78.87** | **75.88** | **77.69** |
+| 20%全标注 | - Alignment（Stage 1，20%监督上界） | 79.13 | 81.38 | 79.20 |
+| 10%全标注 | - Alignment（Stage 1，10%监督） | 75.60 | 73.62 | 74.77 |
+| 10%全标注 | - Alignment - VQA（去掉MedVInT文本） | 73.35 | 70.53 | 74.08 |
+| 10%全标注 | - Alignment - VQA - GPT4（只剩BiomedCLIP视觉bbox） | 72.76 | 68.89 | 73.16 |
+| 10%全标注 | - Alignment - VQA - CAM（只剩GPT4文字，**无bbox/point**） | 57.02 | 59.05 | 69.97 |
+
+**关键解读：**
+- **最后一行（-CAM）**：BiomedCLIP的saliency map（gScoreCAM）是bbox和point的唯一来源，去掉CAM意味着**完全没有视觉几何prompt（无bbox、无point）**，仅有GPT4文字输入prompt encoder。Dice从72.76暴跌到57.02（-15.74），说明视觉几何prompt是最关键的组件。
+- **VQA（MedVInT）贡献约+2.84%**（73.35 → 75.60），**GPT4文字贡献约+0.59%**（72.76 → 73.35）
+- **DPO Alignment价值**：10%+10%无标注（78.87）≈ 20%全标注（79.13），即DPO用无标注数据追平了多10%全标注的效果。
+
+### 其他我应该不会复现的实验
+#### Table 2：三种偏好打分策略
+
+| 策略 | Dice（Xray）| Dice（USD）| mDice（CT）|
+|---|---|---|---|
+| 仅最佳候选（SAM原始思路） | 77.09 | 73.81 | 75.01 |
+| Rating（IoU分bin评分1-4） | 78.41 | 75.52 | 77.23 |
+| **Ranking（排序，论文最终选用）** | **78.87** | **75.88** | **77.69** |
+
+Ranking略优于Rating，两者都显著优于仅用最佳候选。
+
+#### Table 4（补充）：Rating噪声鲁棒性
+
+随机翻转相邻等级（1↔2, 2↔3, 3↔4）影响一定比例样本：
+
+| 翻转比例 | Dice（Xray）| Dice（USD）| mDice（CT）|
+|---|---|---|---|
+| 0% | 78.87 | 75.88 | 77.69 |
+| 5% | 78.82 | 75.83 | 77.62 |
+| 10% | 78.79 | 75.81 | 77.58 |
+| 20% | 78.71 | 75.74 | 77.51 |
+| 30% | 78.63 | 75.68 | 77.45 |
+
+**结论：DPO对rating噪声极其鲁棒，30%噪声仅降0.24 Dice。**
+
+#### Table 5（补充）：β1、β2超参选择
+
+| β1 | β2 | Dice（Xray）| Dice（USD）| mDice（CT）|
+|---|---|---|---|---|
+| 2 | 1 | 78.12 | 75.43 | 77.47 |
+| 1.5 | 0.75 | 78.64 | 75.70 | 77.53 |
+| **1** | **0.5** | **78.87** | **75.88** | **77.69** |
+
+最优：β1=1, β2=0.5。
+
+## 针对宫颈MRI复刻的实验设计建议
+> 这个建议不知道是否合适，因为毕竟我的数据可能不多，把其实本来也没有多少的train按照细致的比例划分，一是会不会需要做的实验太多，二是会不会也没有理想的效果
+
+基于132个训练病人（~1149张pos切片）+ 30个测试病人：
+
+**对比实验设置：**
+
+| 基线 | 数据比例 | 备注 |
+|---|---|---|
+| U-Net | 10%/20%/50%/100% | 全监督，对应病人数×比例 |
+| nnU-Net | 同上 | 同上 |
+| SAM-Med2D（GT bbox） | 同上 | 用GT mask提取bbox作为prompt |
+| Self-Prompt SAM | 同上 | 可选，实现成本较高 |
+| Prompt-only（我们的Stage 1） | 同上 | 全监督上界 |
+| **Ours（Stage 1 + Stage 2 DPO）** | **10%+10%/20%/40%** | **半监督，核心方法** |
+
+**消融实验设置（最小可行集合）：**
+
+1. 完整方法 vs 去掉Alignment（验证DPO价值）
+2. 去掉GPT4文字（只用BiomedCLIP视觉bbox）——宫颈MRI中GPT4贡献可能更小
+3. 去掉BiomedCLIP视觉改用GT bbox（对应方案A，验证视觉prompt质量影响）
+4. 是否需要完全删去visual prompt这块的实验呢？不做——大家都知道没有 bbox SAM 效果会很差。不如把精力放在数据比例实验上
+
+**数据比例映射（宫颈MRI场景）：**
+> 这个建议不知道是否合适，因为毕竟我的数据可能不多，把其实本来也没有多少的train按照细致的比例划分，一是会不会需要做的实验太多，二是会不会也没有理想的效果
+
+| 论文比例 | Stage 1 | Stage 2 | 对应病人数 |
+|---|---|---|---|
+| 10%+10% | ~13人有标注 | ~13人无标注 | 共26人（其余106人不用） |
+| 10%+20% | ~13人有标注 | ~26人无标注 | 共39人 |
+| 10%+40% | ~13人有标注 | ~53人无标注 | 共66人 |
+| 10%+90% | ~13人有标注 | ~119人无标注 | 共132人（全量） |
+
+
+
+

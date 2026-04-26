@@ -45,6 +45,7 @@ def parse_args():
     parser.add_argument("--encoder_adapter", type=bool, default=True, help="use adapter")
     parser.add_argument("--use_amp", type=bool, default=False, help="use amp")
     parser.add_argument("--val_interval", type=int, default=5, help="validate every N epochs")
+    parser.add_argument("--save_interval", type=int, default=0, help="save checkpoint every N epochs (0=disabled)")
     parser.add_argument("--wandb_project", type=str, default=None, help="wandb project name, None to disable")
     args = parser.parse_args()
     if args.resume is not None:
@@ -373,6 +374,14 @@ def main(args):
                 if args.use_amp:
                     model = model.half()
                 log_msg += f" [BEST, saved]"
+
+        if args.save_interval > 0 and (epoch + 1) % args.save_interval == 0:
+            save_path = os.path.join(save_dir, f"epoch{epoch+1}.pth")
+            state = {'model': model.float().state_dict(), 'optimizer': optimizer, 'epoch': epoch + 1}
+            torch.save(state, save_path)
+            if args.use_amp:
+                model = model.half()
+            log_msg += f" [saved epoch{epoch+1}.pth]"
 
         loggers.info(log_msg)
         if args.wandb_project:

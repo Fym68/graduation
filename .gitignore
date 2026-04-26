@@ -1,6 +1,8 @@
 # 论文
 *.pdf
 *.csv
+*.pyc
+__pycache__/
 data/
 # 其他文件
 /paper_stage2_DPO_content.md

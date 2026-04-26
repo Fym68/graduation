@@ -88,10 +88,11 @@ class TestingDataset(Dataset):
         image_input["boxes"] = boxes
         image_input["original_size"] = (h, w)
         image_input["label_path"] = '/'.join(mask_path.split('/')[:-1])
+        image_input["image_path"] = self.image_paths[index]
 
         if self.return_ori_mask:
             image_input["ori_label"] = ori_mask
-     
+
         image_name = self.label_paths[index].split('/')[-1]
         if self.requires_name:
             image_input["name"] = image_name
@@ -180,6 +181,48 @@ class TrainingDataset(Dataset):
             return image_input
         else:
             return image_input
+    def __len__(self):
+        return len(self.image_paths)
+
+
+class DPODataset(Dataset):
+    """Stage 2 DPO dataset. Loads image + GT label + box prompt."""
+
+    def __init__(self, data_dir, image_size=256):
+        dataset = json.load(open(os.path.join(data_dir, "image2label_stage2.json"), "r"))
+        self.image_paths = list(dataset.keys())
+        self.label_paths = [v[0] for v in dataset.values()]
+        self.image_size = image_size
+
+    def __getitem__(self, index):
+        image = cv2.imread(self.image_paths[index])
+        h, w, _ = image.shape
+
+        mask = cv2.imread(self.label_paths[index], 0)
+        if mask.max() == 255:
+            mask = mask / 255
+
+        transforms = train_transforms(self.image_size, h, w)
+        augments = transforms(image=image, mask=mask)
+        image_tensor = augments["image"]
+        mask_tensor = augments["mask"].to(torch.int64)
+
+        if mask_tensor.sum() == 0:
+            # Augmentation wiped out the mask; retry without augmentation
+            print("⚠️[WARNING] 增强功能把mask")
+            transforms = test_transforms(self.image_size, h, w)
+            augments = transforms(image=image, mask=mask)
+            image_tensor = augments["image"]
+            mask_tensor = augments["mask"].to(torch.int64)
+
+        boxes = get_boxes_from_mask(mask_tensor)
+
+        return {
+            "image": image_tensor,
+            "label": mask_tensor.unsqueeze(0).float(),
+            "boxes": boxes,
+        }
+
     def __len__(self):
         return len(self.image_paths)
 

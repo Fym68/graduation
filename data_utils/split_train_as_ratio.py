@@ -1,3 +1,7 @@
+"""
+    本脚本的ratio指的是，stage1的ration，剩下的都是stage2的。和split_ratio_experiment.py不一样
+"""
+
 import pandas as pd
 import numpy as np
 import os
@@ -52,7 +56,15 @@ def generate_experiment_split(metadata_path, output_path, ratio, seed=42):
 INPUT_META = '/home/fym/Nas/fym/datasets/graduation/metadata_3d.csv'
 
 # 训练的阶段数据划分为——2:8
-generate_experiment_split(INPUT_META, '/home/fym/graduation/data/t2s_train_2vs8.csv', ratio=0.2)
+generate_experiment_split(INPUT_META, '/home/fym/graduation/data/t2s_train_2vs8.csv', ratio=0.3)
+
+# 不同标注比例实验（# 后续为了做不同比例的stage1和2的实验，又修改的代码
+for pct in [5, 10, 30]:
+    generate_experiment_split(
+        INPUT_META,
+        f'/home/fym/graduation/data/t2s_train_{pct}pct.csv',
+        ratio=pct / 100,
+    )
 
 
 
