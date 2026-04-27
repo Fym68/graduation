@@ -751,7 +751,7 @@ Ranking略优于Rating，两者都显著优于仅用最佳候选。
 | U-Net | 10%/20%/50%/100% | 全监督，对应病人数×比例 |
 | nnU-Net | 同上 | 同上 |
 | SAM-Med2D（GT bbox） | 同上 | 用GT mask提取bbox作为prompt |
-| Self-Prompt SAM | 同上 | 可选，实现成本较高 |
+| MedSAM | 同上 | 可选，实现成本较高 |
 | Prompt-only（我们的Stage 1） | 同上 | 全监督上界 |
 | **Ours（Stage 1 + Stage 2 DPO）** | **10%+10%/20%/40%** | **半监督，核心方法** |
 

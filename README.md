@@ -107,7 +107,118 @@
 2. 正在进行的实验是：**不同标注比例实验（强化"标注稀缺"叙事）**：把 Stage 1 的标注数据从 20% 改成 10% 和 5%，看 Stage 1 性能下降多少，然后 Stage 2 能拉回多少。这直接回答"标注越少，DPO 越有价值吗？"
 
 
+# MedSAM项目
+1. MedSAM 和你已有的 SAM-Med2D 有几个关键区别：
 
+MedSAM	SAM-Med2D
+输入分辨率	1024×1024	256×256
+Image Encoder	原版 ViT-B（无 Adapter）	ViT-B + Adapter
+训练模块	image_encoder + mask_decoder	Adapter + prompt_encoder + mask_decoder
+prompt_encoder	冻结	可训练
+数据格式	.npy 文件（imgs/ + gts/ 两个子目录）	PNG + JSON 索引
+
+
+Step-by-Step 操作指南
+Step 1: 下载 MedSAM 预训练权重
+从 Google Drive 下载 medsam_vit_b.pth：
+https://drive.google.com/drive/folders/1ETWmi4AiniJeWOt6HAsYgTjYv_fkgzoN
+
+下载后放到：
+
+
+/home/fym/graduation/MedSAM/work_dir/MedSAM/medsam_vit_b.pth
+Step 2: 数据预处理（运行一次，约5-10分钟）
+
+cd /home/fym/graduation
+python data_utils/prepare_medsam_data.py
+这会把所有 PNG 图像转为 1024×1024 的 npy 格式，并生成 split 文件。完成后检查输出：
+
+
+# 应该看到 imgs/ 和 gts/ 下各有 ~1483 个 npy 文件
+ls MedSAM/data_cervical/npy/imgs/ | wc -l
+ls MedSAM/data_cervical/npy/gts/ | wc -l
+
+# 检查 split 文件行数
+wc -l MedSAM/data_cervical/splits/*.txt
+# 预期：train_20.txt ~224行, train_50.txt ~570行, train_100.txt ~1151行, test.txt ~332行
+Step 3: 训练（每个比例约30-60分钟）
+
+cd /home/fym/graduation/MedSAM
+
+# ===== 20% 标注数据 =====
+python train_cervical.py \
+    --split_file data_cervical/splits/train_20.txt \
+    --test_split_file data_cervical/splits/test.txt \
+    --task_name MedSAM-cervical-20pct \
+    --work_dir /home/fym/Nas/fym/datasets/graduation/medsam \
+    --num_epochs 30 --batch_size 8 --val_interval 5 \
+    --device cuda:0
+
+# ===== 50% 标注数据 =====
+python train_cervical.py \
+    --split_file data_cervical/splits/train_50.txt \
+    --test_split_file data_cervical/splits/test.txt \
+    --task_name MedSAM-cervical-50pct \
+    --work_dir /home/fym/Nas/fym/datasets/graduation/medsam \
+    --num_epochs 30 --batch_size 8 --val_interval 5 \
+    --device cuda:0
+
+# ===== 100% 标注数据 =====
+python train_cervical.py \
+    --split_file data_cervical/splits/train_100.txt \
+    --test_split_file data_cervical/splits/test.txt \
+    --task_name MedSAM-cervical-100pct \
+    --work_dir /home/fym/Nas/fym/datasets/graduation/medsam \
+    --num_epochs 30 --batch_size 8 --val_interval 5 \
+    --device cuda:0
+如果显存不够（MedSAM 在 1024×1024 下比 SAM-Med2D 吃显存多很多），把 --batch_size 改成 4 或 2。
+
+你有 8 张 4090，可以用不同的 --device cuda:X 同时跑多个比例。
+
+训练日志和 checkpoint 保存在 /home/fym/Nas/fym/datasets/graduation/medsam/ 下。
+
+Step 4: 测试评估
+训练完成后，找到每个比例的 best.pth 路径（在日志最后一行会打印），然后：
+
+
+cd /home/fym/graduation/MedSAM
+
+# 查看训练输出目录，找到 best.pth
+ls /home/fym/Nas/fym/datasets/graduation/medsam/models/MedSAM-cervical-*
+
+# ===== 评估 20% =====
+python test_cervical.py \
+    --checkpoint /home/fym/Nas/fym/datasets/graduation/medsam/models/MedSAM-cervical-20pct-*/best.pth \
+    --output_dir results/medsam_20pct \
+    --device cuda:0
+
+# ===== 评估 50% =====
+python test_cervical.py \
+    --checkpoint /home/fym/Nas/fym/datasets/graduation/medsam/models/MedSAM-cervical-50pct-*/best.pth \
+    --output_dir results/medsam_50pct \
+    --device cuda:0
+
+# ===== 评估 100% =====
+python test_cervical.py \
+    --checkpoint /home/fym/Nas/fym/datasets/graduation/medsam/models/MedSAM-cervical-100pct-*/best.pth \
+    --output_dir results/medsam_100pct \
+    --device cuda:0
+每个评估会输出：
+
+results/medsam_Xpct/per_sample_metrics.csv — 每张图的 Dice 和 IoU
+results/medsam_Xpct/summary.json — 汇总统计（mean/std/min/max）
+Step 5（可选）: Zero-shot baseline
+用 MedSAM 预训练权重直接测试，不做任何微调：
+
+
+python test_cervical.py \
+    --checkpoint work_dir/MedSAM/medsam_vit_b.pth \
+    --output_dir results/medsam_zeroshot \
+    --device cuda:0
+关键注意事项
+MedSAM 的 image encoder 是完整的 ViT-B（无 Adapter），1024×1024 输入，显存占用比 SAM-Med2D 大很多。单张 4090 (24GB) 跑 batch_size=8 应该可以，但如果 OOM 就降到 4
+评估在原始分辨率（768×768 等）上进行，和 SAM-Med2D 的评估方式一致，结果可以直接对比
+三个比例可以用不同 GPU 并行跑，节省时间
 
 
 
