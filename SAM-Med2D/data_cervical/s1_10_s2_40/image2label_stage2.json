@@ -1,0 +1,1268 @@
+{
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10176153-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10998303-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11006425-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11006425-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11006425-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11006425-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10433170-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756869-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10436280-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10727429-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10287341-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252092-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10458344-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10252548-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11020176-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-13_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10733156-T2S-13_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051961-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10851798-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10851798-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10851798-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10851798-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10990087-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10146710-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10259668-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11051835-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10737429-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10373705-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10756333-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11029573-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10475874-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10273490-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10754801-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10735611-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-13_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-13_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-14_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-14_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-15_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-15_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-16_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-16_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-17_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-17_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-18_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-18_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-19_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-19_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-20_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-20_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-21_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-21_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-22_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-22_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-23_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-23_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-24_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-24_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-25_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10330899-T2S-25_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10463165-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734709-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10763009-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10395552-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11046673-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10761038-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10251650-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10404638-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10734967-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-13_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-13_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-14_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10375826-T2S-14_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11002961-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10392019-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10846048-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10844749-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10481007-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10179131-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-12_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-12_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-13_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-13_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-14_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-14_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-15_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-15_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-16_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10736678-T2S-16_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/11041073-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10435020-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-11_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10468910-T2S-11_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10431034-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-05_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-05_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-06_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-06_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-07_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-07_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-08_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-08_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-09_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-09_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-10_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10276677-T2S-10_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10753828-T2S-04_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-01_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-01_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-02_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-02_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-03_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-03_label.png"
+  ],
+  "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-04_pos.png": [
+    "/home/fym/Nas/fym/datasets/graduation/cervical2d/T2S/train/positive/10406028-T2S-04_label.png"
+  ]
+}
