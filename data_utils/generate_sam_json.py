@@ -108,11 +108,22 @@ if __name__ == "__main__":
     #     else:
     #         print(f"Skipping {pct}%: {csv_path} not found")
 
-    # 数据比例映射实验（Stage1 固定 10%，Stage2 变化）
-    for s2_pct in [10, 20, 40, 90]:
-        csv_path = f"/home/fym/graduation/data/t2s_s1_10_s2_{s2_pct}.csv"
-        out_dir = f"/home/fym/graduation/SAM-Med2D/data_cervical/s1_10_s2_{s2_pct}"
+    # # 数据比例映射实验（Stage1 固定 10%，Stage2 变化）
+    # for s2_pct in [10, 20, 40, 90]:
+    #     csv_path = f"/home/fym/graduation/data/t2s_s1_10_s2_{s2_pct}.csv"
+    #     out_dir = f"/home/fym/graduation/SAM-Med2D/data_cervical/s1_10_s2_{s2_pct}"
+    #     if os.path.exists(csv_path):
+    #         generate_json(csv_path, out_dir)
+    #     else:
+    #         print(f"Skipping s1_10_s2_{s2_pct}: {csv_path} not found")
+
+
+    # 全监督的实验
+    for s1_pct in [20, 50, 100]:
+        csv_path = f"/home/fym/graduation/data/t2s_supervised_{s1_pct}.csv"
+        out_dir = f"/home/fym/graduation/SAM-Med2D/data_cervical/s1_sup{s1_pct}"
         if os.path.exists(csv_path):
             generate_json(csv_path, out_dir)
         else:
-            print(f"Skipping s1_10_s2_{s2_pct}: {csv_path} not found")
+            print(f"Skipping s1_sup{s1_pct}: {csv_path} not found")
+        
