@@ -59,6 +59,8 @@ class PromptEncoder(nn.Module):
         )
         self.no_mask_embed = nn.Embedding(1, embed_dim)
 
+        self.text_projection = nn.Linear(512, embed_dim)
+
     def get_dense_pe(self) -> torch.Tensor:
         """
         Returns the positional encoding used to encode point prompts,
@@ -139,6 +141,7 @@ class PromptEncoder(nn.Module):
         points: Optional[Tuple[torch.Tensor, torch.Tensor]],
         boxes: Optional[torch.Tensor],
         masks: Optional[torch.Tensor],
+        text_embedding: Optional[torch.Tensor] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
         """
         Embeds different types of prompts, returning both sparse and dense
@@ -168,6 +171,10 @@ class PromptEncoder(nn.Module):
         if boxes is not None:
             box_embeddings = self._embed_boxes(boxes)
             sparse_embeddings = torch.cat([sparse_embeddings, box_embeddings], dim=1)
+
+        if text_embedding is not None:
+            text_tokens = self.text_projection(text_embedding)
+            sparse_embeddings = torch.cat([sparse_embeddings, text_tokens.unsqueeze(1)], dim=1)
 
         if masks is not None:
             dense_embeddings = self._embed_masks(masks)

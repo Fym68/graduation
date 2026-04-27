@@ -51,6 +51,7 @@ def parse_args():
     # 布尔开关参数：在命令行中出现该参数时，对应的变量值为 True；不出现时，值为 False
     parser.add_argument("--save_vis", action="store_true", help="save visualization comparison")
     parser.add_argument("--save_heatmap", action="store_true", help="save sigmoid heatmap")
+    parser.add_argument("--text_embeddings", type=str, default=None, help="path to text_embeddings.pt (enables text prompt)")
     args = parser.parse_args()
     if args.iter_point > 1:
         args.point_num = 1
@@ -105,6 +106,7 @@ def prompt_and_decoder(args, batched_input, ddp_model, image_embeddings):
             points=points,
             boxes=batched_input.get("boxes", None),
             masks=batched_input.get("mask_inputs", None),
+            text_embedding=batched_input.get("text_embedding", None),
         )
 
         low_res_masks, iou_predictions = ddp_model.mask_decoder(
@@ -150,7 +152,8 @@ def main(args):
     model = sam_model_registry[args.model_type](args).to(args.device)
 
     criterion = FocalDiceloss_IoULoss()
-    test_dataset = TestingDataset(data_path=args.data_path, image_size=args.image_size, mode='test', requires_name=True, point_num=args.point_num, return_ori_mask=True, prompt_path=args.prompt_path)
+    text_emb_path = args.text_embeddings
+    test_dataset = TestingDataset(data_path=args.data_path, image_size=args.image_size, mode='test', requires_name=True, point_num=args.point_num, return_ori_mask=True, prompt_path=args.prompt_path, text_embeddings_path=text_emb_path)
     test_loader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False, num_workers=4)
     print('Test data:', len(test_loader))
 

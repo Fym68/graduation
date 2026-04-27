@@ -65,6 +65,7 @@ def parse_args():
     p.add_argument("--val_interval", type=int, default=5)
     p.add_argument("--save_interval", type=int, default=10)
     p.add_argument("--wandb_project", default=None)
+    p.add_argument("--text_embeddings", type=str, default=None, help="path to text_embeddings.pt (enables text prompt)")
     return p.parse_args()
 
 # ---------------------------------------------------------------------------
@@ -88,10 +89,10 @@ def is_main(rank):
 # Forward helpers
 # ---------------------------------------------------------------------------
 
-def prompt_and_decoder(model, image_embedding, image_pe, boxes, multimask_output=True):
+def prompt_and_decoder(model, image_embedding, image_pe, boxes, multimask_output=True, text_embedding=None):
     """Run prompt encoder + mask decoder, select best mask by predicted IoU."""
     sparse, dense = model.prompt_encoder(
-        points=None, boxes=boxes, masks=None,
+        points=None, boxes=boxes, masks=None, text_embedding=text_embedding,
     )
     low_res_masks, iou_predictions = model.mask_decoder(
         image_embeddings=image_embedding,
@@ -124,14 +125,17 @@ def train_one_epoch(model, ref_decoder, dataloader, optimizer, criterion, device
         images = batch["image"].to(device)
         labels = batch["label"].to(device)
         boxes = batch["boxes"].to(device)
+        text_emb = batch.get("text_embedding", None)
+        if text_emb is not None:
+            text_emb = text_emb.to(device)
 
         with torch.no_grad():
             image_embedding = model.image_encoder(images)
             image_pe = model.prompt_encoder.get_dense_pe()
 
-        current_logits = prompt_and_decoder(model, image_embedding, image_pe, boxes)
+        current_logits = prompt_and_decoder(model, image_embedding, image_pe, boxes, text_embedding=text_emb)
         with torch.no_grad():
-            sparse, dense = model.prompt_encoder(points=None, boxes=boxes, masks=None)
+            sparse, dense = model.prompt_encoder(points=None, boxes=boxes, masks=None, text_embedding=text_emb)
             ref_logits_all, ref_iou_all = ref_decoder(
                 image_embeddings=image_embedding,
                 image_pe=image_pe,
@@ -178,10 +182,13 @@ def validate(model, dataloader, device, image_size):
         boxes = batch["boxes"].to(device)
         ori_labels = batch["ori_label"].to(device)
         original_size = batch["original_size"]
+        text_emb = batch.get("text_embedding", None)
+        if text_emb is not None:
+            text_emb = text_emb.to(device)
 
         image_embedding = model.image_encoder(images)
         image_pe = model.prompt_encoder.get_dense_pe()
-        low_res_masks = prompt_and_decoder(model, image_embedding, image_pe, boxes)
+        low_res_masks = prompt_and_decoder(model, image_embedding, image_pe, boxes, text_embedding=text_emb)
 
         masks = F.interpolate(low_res_masks, (image_size, image_size), mode="bilinear", align_corners=False)
         ori_h, ori_w = original_size
@@ -285,8 +292,11 @@ def main():
         sup_criterion = lambda pred, mask: 20.0 * focal_loss(pred, mask) + dice_loss(pred, mask)
 
     # Datasets
-    train_dataset = DPODataset(args.data_path, image_size=args.image_size)
-    val_dataset = TestingDataset(args.data_path, image_size=args.image_size, mode="test", requires_name=False)
+    text_emb_path = args.text_embeddings
+    if text_emb_path and is_main(rank):
+        print(f"*******Text prompt enabled, loading from {text_emb_path}")
+    train_dataset = DPODataset(args.data_path, image_size=args.image_size, text_embeddings_path=text_emb_path)
+    val_dataset = TestingDataset(args.data_path, image_size=args.image_size, mode="test", requires_name=False, text_embeddings_path=text_emb_path)
 
     train_sampler = DistributedSampler(train_dataset, shuffle=True) if use_ddp else None
     train_loader = DataLoader(

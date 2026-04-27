@@ -18,6 +18,10 @@ try:
 except ImportError:
     amp = None
 import random
+
+os.environ['SSL_CERT_DIR'] = '/etc/ssl/certs'
+os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-certificates.crt'
+
 import wandb
 
 
@@ -46,6 +50,7 @@ def parse_args():
     parser.add_argument("--use_amp", type=bool, default=False, help="use amp")
     parser.add_argument("--val_interval", type=int, default=5, help="validate every N epochs")
     parser.add_argument("--save_interval", type=int, default=0, help="save checkpoint every N epochs (0=disabled)")
+    parser.add_argument("--text_embeddings", type=str, default=None, help="path to text_embeddings.pt (enables text prompt)")
     parser.add_argument("--wandb_project", type=str, default=None, help="wandb project name, None to disable")
     args = parser.parse_args()
     if args.resume is not None:
@@ -79,12 +84,15 @@ def prompt_and_decoder(args, batched_input, model, image_embeddings, decoder_ite
     else:
         points = None
 
+    text_emb = batched_input.get("text_embedding", None)
+
     if decoder_iter:
-        with torch.no_grad():                               # 在 iterative refinement 阶段，不训练 prompt encoder
+        with torch.no_grad():
             sparse_embeddings, dense_embeddings = model.prompt_encoder(
                 points=points,
                 boxes=batched_input.get("boxes", None),
                 masks=batched_input.get("mask_inputs", None),
+                text_embedding=text_emb,
             )
 
     else:
@@ -92,6 +100,7 @@ def prompt_and_decoder(args, batched_input, model, image_embeddings, decoder_ite
             points=points,
             boxes=batched_input.get("boxes", None),
             masks=batched_input.get("mask_inputs", None),
+            text_embedding=text_emb,
         )
 
     low_res_masks, iou_predictions = model.mask_decoder(
@@ -268,6 +277,7 @@ def validate(args, model, val_loader, criterion):
             points=None,
             boxes=batched_input.get("boxes", None),
             masks=batched_input.get("mask_inputs", None),
+            text_embedding=batched_input.get("text_embedding", None),
         )
         low_res_masks, iou_predictions = model.mask_decoder(
             image_embeddings=image_embeddings,
@@ -324,11 +334,15 @@ def main(args):
     else:
         print('*******Do not use mixed precision')
 
-    train_dataset = TrainingDataset(args.data_path, image_size=args.image_size, mode='train', point_num=1, mask_num=args.mask_num, requires_name=False)
+    text_emb_path = args.text_embeddings
+    if text_emb_path:
+        print(f'*******Text prompt enabled, loading from {text_emb_path}')
+
+    train_dataset = TrainingDataset(args.data_path, image_size=args.image_size, mode='train', point_num=1, mask_num=args.mask_num, requires_name=False, text_embeddings_path=text_emb_path)
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=4)
     print('*******Train data:', len(train_dataset))
 
-    val_dataset = TestingDataset(data_path=args.data_path, image_size=args.image_size, mode='test', requires_name=False, point_num=1, return_ori_mask=True)
+    val_dataset = TestingDataset(data_path=args.data_path, image_size=args.image_size, mode='test', requires_name=False, point_num=1, return_ori_mask=True, text_embeddings_path=text_emb_path)
     val_loader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=4)
     print('*******Val data:', len(val_dataset))
 

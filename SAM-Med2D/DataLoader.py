@@ -15,25 +15,15 @@ import random
 
 
 class TestingDataset(Dataset):
-    
-    def __init__(self, data_path, image_size=256, mode='test', requires_name=True, point_num=1, return_ori_mask=True, prompt_path=None):
-        """
-        Initializes a TestingDataset object.
-        Args:
-            data_path (str): The path to the data.
-            image_size (int, optional): The size of the image. Defaults to 256.
-            mode (str, optional): The mode of the dataset. Defaults to 'test'.
-            requires_name (bool, optional): Indicates whether the dataset requires image names. Defaults to True.
-            point_num (int, optional): The number of points to retrieve. Defaults to 1.
-            return_ori_mask (bool, optional): Indicates whether to return the original mask. Defaults to True.
-            prompt_path (str, optional): The path to the prompt file. Defaults to None.
-        """
+
+    def __init__(self, data_path, image_size=256, mode='test', requires_name=True, point_num=1, return_ori_mask=True, prompt_path=None, text_embeddings_path=None):
         self.image_size = image_size
         self.return_ori_mask = return_ori_mask
         self.prompt_path = prompt_path
         self.prompt_list = {} if prompt_path is None else json.load(open(prompt_path, "r"))
         self.requires_name = requires_name
         self.point_num = point_num
+        self.text_embeddings = torch.load(text_embeddings_path, map_location="cpu") if text_embeddings_path else None
 
         json_file = open(os.path.join(data_path, f'label2image_{mode}.json'), "r")
         dataset = json.load(json_file)
@@ -93,6 +83,11 @@ class TestingDataset(Dataset):
         if self.return_ori_mask:
             image_input["ori_label"] = ori_mask
 
+        if self.text_embeddings is not None:
+            pid = self.image_paths[index].split('/')[-1].split('-T2S-')[0]
+            if pid in self.text_embeddings:
+                image_input["text_embedding"] = self.text_embeddings[pid]
+
         image_name = self.label_paths[index].split('/')[-1]
         if self.requires_name:
             image_input["name"] = image_name
@@ -105,21 +100,12 @@ class TestingDataset(Dataset):
 
 
 class TrainingDataset(Dataset):
-    def __init__(self, data_dir, image_size=256, mode='train', requires_name=True, point_num=1, mask_num=5):
-        """
-        Initializes a training dataset.
-        Args:
-            data_dir (str): Directory containing the dataset.
-            image_size (int, optional): Desired size for the input images. Defaults to 256.
-            mode (str, optional): Mode of the dataset. Defaults to 'train'.
-            requires_name (bool, optional): Indicates whether to include image names in the output. Defaults to True.
-            num_points (int, optional): Number of points to sample. Defaults to 1.
-            num_masks (int, optional): Number of masks to sample. Defaults to 5.
-        """
+    def __init__(self, data_dir, image_size=256, mode='train', requires_name=True, point_num=1, mask_num=5, text_embeddings_path=None):
         self.image_size = image_size
         self.requires_name = requires_name
         self.point_num = point_num
         self.mask_num = mask_num
+        self.text_embeddings = torch.load(text_embeddings_path, map_location="cpu") if text_embeddings_path else None
 
         dataset = json.load(open(os.path.join(data_dir, f'image2label_{mode}.json'), "r"))
         self.image_paths = list(dataset.keys())
@@ -175,6 +161,11 @@ class TrainingDataset(Dataset):
         image_input["point_coords"] = point_coords
         image_input["point_labels"] = point_labels
 
+        if self.text_embeddings is not None:
+            pid = self.image_paths[index].split('/')[-1].split('-T2S-')[0]
+            if pid in self.text_embeddings:
+                image_input["text_embedding"] = self.text_embeddings[pid]
+
         image_name = self.image_paths[index].split('/')[-1]
         if self.requires_name:
             image_input["name"] = image_name
@@ -188,11 +179,12 @@ class TrainingDataset(Dataset):
 class DPODataset(Dataset):
     """Stage 2 DPO dataset. Loads image + GT label + box prompt."""
 
-    def __init__(self, data_dir, image_size=256):
+    def __init__(self, data_dir, image_size=256, text_embeddings_path=None):
         dataset = json.load(open(os.path.join(data_dir, "image2label_stage2.json"), "r"))
         self.image_paths = list(dataset.keys())
         self.label_paths = [v[0] for v in dataset.values()]
         self.image_size = image_size
+        self.text_embeddings = torch.load(text_embeddings_path, map_location="cpu") if text_embeddings_path else None
 
     def __getitem__(self, index):
         image = cv2.imread(self.image_paths[index])
@@ -217,11 +209,18 @@ class DPODataset(Dataset):
 
         boxes = get_boxes_from_mask(mask_tensor)
 
-        return {
+        result = {
             "image": image_tensor,
             "label": mask_tensor.unsqueeze(0).float(),
             "boxes": boxes,
         }
+
+        if self.text_embeddings is not None:
+            pid = self.image_paths[index].split('/')[-1].split('-T2S-')[0]
+            if pid in self.text_embeddings:
+                result["text_embedding"] = self.text_embeddings[pid]
+
+        return result
 
     def __len__(self):
         return len(self.image_paths)
