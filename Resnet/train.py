@@ -1,4 +1,5 @@
 import os
+import csv
 import argparse
 import numpy as np
 import torch
@@ -79,6 +80,11 @@ def main():
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[20, 35], gamma=0.5)
 
     best_dice = 0.0
+    log_path = os.path.join(args.ckpt_dir, "train_log.csv")
+    with open(log_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["epoch", "train_loss", "lr", "val_dice", "val_iou"])
+
     for epoch in range(args.epochs):
         model.train()
         epoch_loss = []
@@ -97,8 +103,10 @@ def main():
 
         avg_loss = np.mean(epoch_loss)
         scheduler.step()
-        print(f"[{datetime.now():%H:%M:%S}] Epoch {epoch+1} | loss={avg_loss:.4f} | lr={scheduler.get_last_lr()[0]:.6f}")
+        lr = scheduler.get_last_lr()[0]
+        print(f"[{datetime.now():%H:%M:%S}] Epoch {epoch+1} | loss={avg_loss:.4f} | lr={lr:.6f}")
 
+        val_dice, val_iou = None, None
         if (epoch + 1) % args.val_interval == 0 or epoch == args.epochs - 1:
             val_dice, val_iou = validate(model, val_loader, device)
             print(f"  Val Dice={val_dice:.4f}, IoU={val_iou:.4f}")
@@ -108,6 +116,12 @@ def main():
                              "dice": val_dice, "iou": val_iou},
                             os.path.join(args.ckpt_dir, "best.pth"))
                 print(f"  -> New best Dice: {best_dice:.4f}")
+
+        with open(log_path, "a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([epoch + 1, f"{avg_loss:.6f}", f"{lr:.6f}",
+                             f"{val_dice:.4f}" if val_dice is not None else "",
+                             f"{val_iou:.4f}" if val_iou is not None else ""])
 
         torch.save({"model": model.state_dict(), "epoch": epoch + 1},
                     os.path.join(args.ckpt_dir, "latest.pth"))
