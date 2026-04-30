@@ -231,8 +231,10 @@ def stack_dict_batched(batched_input):
     for k,v in batched_input.items():
         if isinstance(v, list):
             out_dict[k] = v
-        else:
+        elif v.ndim >= 3:
             out_dict[k] = v.reshape(-1, *v.shape[2:])
+        else:
+            out_dict[k] = v
     return out_dict
 
 
