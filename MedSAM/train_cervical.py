@@ -317,6 +317,16 @@ def main():
             import wandb
             wandb.log(log_dict)
 
+        # Save periodic checkpoint
+        if (epoch + 1) % args.val_interval == 0:
+            torch.save({
+                "model": medsam_model.state_dict(),
+                "optimizer": optimizer.state_dict(),
+                "epoch": epoch,
+                "best_dice": best_dice,
+            }, os.path.join(model_save_path, f"epoch_{epoch+1}.pth"))
+            logger.info(f"  Saved epoch_{epoch+1}.pth")
+
         # Save latest
         torch.save({
             "model": medsam_model.state_dict(),
