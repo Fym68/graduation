@@ -163,7 +163,7 @@ def validate(model, val_loader, seg_loss, ce_loss, device):
         image, gt2D = image.to(device), gt2D.to(device)
         boxes_np = boxes.detach().cpu().numpy()
         pred = model(image, boxes_np)
-        loss = seg_loss(pred, gt2D) + ce_loss(pred, gt2D.float())
+        loss = seg_loss(pred, gt2D.float()) + ce_loss(pred, gt2D.float())
         total_loss += loss.item()
         total_dice += compute_dice(pred, gt2D)
         total_iou += compute_iou(pred, gt2D)
@@ -274,13 +274,13 @@ def main():
             if args.use_amp:
                 with torch.autocast(device_type="cuda", dtype=torch.float16):
                     pred = medsam_model(image, boxes_np)
-                    loss = seg_loss(pred, gt2D) + ce_loss(pred, gt2D.float())
+                    loss = seg_loss(pred, gt2D.float()) + ce_loss(pred, gt2D.float())
                 scaler.scale(loss).backward()
                 scaler.step(optimizer)
                 scaler.update()
             else:
                 pred = medsam_model(image, boxes_np)
-                loss = seg_loss(pred, gt2D) + ce_loss(pred, gt2D.float())
+                loss = seg_loss(pred, gt2D.float()) + ce_loss(pred, gt2D.float())
                 loss.backward()
                 optimizer.step()
 
