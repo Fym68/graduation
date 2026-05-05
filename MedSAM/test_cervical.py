@@ -90,15 +90,12 @@ def medsam_inference(sam_model, img_1024_tensor, box_1024, original_size, device
 def load_model(checkpoint_path, device):
     """Load fine-tuned MedSAM model from checkpoint."""
     ckpt = torch.load(checkpoint_path, map_location=device)
-    state_dict = ckpt["model"] if "model" in ckpt else ckpt
-
-    # build_sam requires a valid checkpoint path, so we load the fine-tuned
-    # weights directly: first build with the same checkpoint to get architecture,
-    # then overwrite with fine-tuned state_dict
-    sam_model = sam_model_registry["vit_b"](checkpoint=checkpoint_path)
-    # If the checkpoint is our training format (has "model" key), reload properly
     if "model" in ckpt:
-        sam_model.load_state_dict(state_dict, strict=True)
+        state_dict = ckpt["model"]
+    else:
+        state_dict = ckpt
+    sam_model = sam_model_registry["vit_b"](checkpoint=None)
+    sam_model.load_state_dict(state_dict, strict=True)
     sam_model.to(device).eval()
     return sam_model, ckpt.get("epoch", -1), ckpt.get("best_dice", -1)
 
