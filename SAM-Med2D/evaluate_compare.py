@@ -17,7 +17,6 @@ Output:
 """
 
 import argparse
-import csv
 import os
 from collections import OrderedDict
 
@@ -44,6 +43,9 @@ def parse_args():
     p.add_argument("--encoder_adapter", type=bool, default=True)
     p.add_argument("--text_embeddings", type=str, default=None)
     p.add_argument("--device", default="cuda")
+    p.add_argument("--csv_path", type=str, default=None,
+                   help="Path to comparison CSV. If exists, append columns; if not, create new. "
+                        "Defaults to {output_dir}/compare_dice.csv")
     return p.parse_args()
 
 
@@ -176,19 +178,26 @@ def main():
         del model
         torch.cuda.empty_cache()
 
-    sample_names = list(list(all_results.values())[0].keys())
+    # Save / update CSV (append columns if file exists)
+    import pandas as pd
+    csv_path = args.csv_path or os.path.join(args.output_dir, "compare_dice.csv")
     ckpt_names = list(all_results.keys())
 
-    csv_path = os.path.join(args.output_dir, "compare_dice.csv")
-    with open(csv_path, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["name"] + ckpt_names)
-        for name in sample_names:
-            row = [name] + [all_results[c].get(name, "") for c in ckpt_names]
-            writer.writerow(row)
-        means = ["mean"] + [f"{np.mean(list(all_results[c].values())):.4f}"
-                            for c in ckpt_names]
-        writer.writerow(means)
+    if os.path.exists(csv_path):
+        df = pd.read_csv(csv_path, index_col=0)
+    else:
+        df = pd.DataFrame()
+        df.index.name = "name"
+
+    for ckpt_name in ckpt_names:
+        df[ckpt_name] = pd.Series(all_results[ckpt_name])
+
+    # Add mean row
+    mean_row = {c: np.mean(list(all_results[c].values())) for c in ckpt_names}
+    for c in ckpt_names:
+        df.loc["mean", c] = f"{mean_row[c]:.4f}"
+
+    df.to_csv(csv_path)
 
     print(f"\nCSV saved: {csv_path}")
     print(f"Masks saved under: {args.output_dir}/{{ckpt_name}}/masks/")

@@ -76,8 +76,11 @@ def main():
             d = dice_score(pred.squeeze(), mask_batch.squeeze()).item()
             results[slice_name] = d
 
-            # Save prediction mask
-            pred_np = pred.squeeze().cpu().numpy().astype(np.uint8) * 255
+            # Save prediction mask at original resolution
+            ori_mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+            ori_h, ori_w = ori_mask.shape[:2]
+            pred_np = pred.squeeze().cpu().numpy().astype(np.uint8)
+            pred_np = cv2.resize(pred_np, (ori_w, ori_h), interpolation=cv2.INTER_NEAREST) * 255
             cv2.imwrite(os.path.join(args.vis_dir, f"{slice_name}.png"), pred_np)
 
     # Save / update CSV
@@ -87,7 +90,9 @@ def main():
         df = pd.DataFrame()
         df.index.name = "slice_name"
 
-    df[args.model_name] = pd.Series(results)
+    # df[args.model_name] = pd.Series(results)
+    # 只对新增列的数据保留小数点后 4 位
+    df[args.model_name] = pd.Series(results).round(4)
     df.to_csv(args.csv_path)
 
     mean_dice = np.mean(list(results.values()))
